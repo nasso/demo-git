@@ -20,3 +20,9 @@
     <li>{item}</li>
   {/each}
 </ul>
+
+<style>
+  ul {
+    list-style: none;
+  }
+</style>
