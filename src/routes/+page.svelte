@@ -6,6 +6,7 @@
     e.preventDefault();
 
     items = [...items, newItemText];
+    newItemText = "";
   }
 </script>
 
