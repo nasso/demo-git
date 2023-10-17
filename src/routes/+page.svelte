@@ -1,7 +1,21 @@
 <script lang="ts">
+  let items: string[] = [];
+  let newItemText = "";
+
+  function handleSubmit(e: SubmitEvent) {
+    e.preventDefault();
+
+    items = [...items, newItemText];
+  }
 </script>
 
-<form>
-  <input type="text" />
+<form on:submit={handleSubmit}>
+  <input type="text" bind:value={newItemText} />
   <button>Add</button>
 </form>
+
+<ul>
+  {#each items as item}
+    <li>{item}</li>
+  {/each}
+</ul>
